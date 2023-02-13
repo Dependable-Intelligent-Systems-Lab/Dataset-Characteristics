@@ -1,4 +1,4 @@
-# DACE: Dataset Assessment and Characteristics Evaluation
+# D-ACE: Dataset Assessment and Characteristics Evaluation
 
 
 Currently Supporting Characteristics:
