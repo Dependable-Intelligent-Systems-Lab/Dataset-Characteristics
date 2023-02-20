@@ -5,6 +5,20 @@
 
 Currently Supporting Characteristics:
 
+
+| Characteristics                                | Characteristics                                        |
+| ---------------------------------------------- | ------------------------------------------------------ |
+| Dimensionality (d)                             | NrOfInstances (N)                                      |
+| NrOfClasses (C)                                | ZeroSparsity (OS)                                      |
+| NaNSparsity (NS)                               | DataSparsity (DS)                                      |
+| DataSparsityRatio (DSR)                        | Correlation of Features with Class (CorrFC)            |
+| Correlation of Features without Class (CorrFNC)| Multivariate normality? (MVN)                          |
+| Homogeneity of class covariance (HCCov)        | Intrinsic Dimensionality-PCA (ID)                      |
+| Intrinsic Dimensionality Ratio (IDR)           | Feature Noise variance (FN1)                           |
+| Feature Noise paper (FN2)                      |                                                        |
+
+
+
 * Dimensionality (d)
 *	NrOfInstances (N)
 *	NrOfClasses (C)
