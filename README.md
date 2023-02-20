@@ -21,6 +21,8 @@ Currently Supporting Characteristics:
 To-do:
 * adding dataset separability evaluation metrics
 * adding geometric characteristics
+* adding miss-labeling ratio
+* Checking for the dataset balance with respect to sensitive features for fairness evaluation
 
 ## Collaborators
 <a href = "https://www.hull.ac.uk/work-with-us/research/groups/dependable-intelligent-systems">Dependable Intelligent Systems Lab., University of Hull</a>
