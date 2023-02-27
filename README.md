@@ -12,7 +12,7 @@
 | NrOfClasses (C)                                | ZeroSparsity (OS)                                      |
 | NaNSparsity (NS)                               | DataSparsity (DS)                                      |
 | DataSparsityRatio (DSR)                        | Correlation of Features with Class (CorrFC)            |
-| Correlation of Features without Class (CorrFNC)| Multivariate normality? (MVN)                          |
+| Correlation of Features without Class (CorrFNC)| Multivariate Normality (MVN)                          |
 | Homogeneity of class covariance (HCCov)        | Intrinsic Dimensionality-PCA (ID)                      |
 | Intrinsic Dimensionality Ratio (IDR)           | Feature Noise variance (FN1)                           |
 | Feature Noise paper (FN2)                      |                                                        |
