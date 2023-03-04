@@ -22,6 +22,7 @@ To-do:
 * adding dataset separability evaluation metrics
 * adding geometric characteristics
 * adding miss-labeling ratio
+* adding algorithms like Data Shapley: Ghorbani, A., & Zou, J. (2019, May). Data shapley: Equitable valuation of data for machine learning. In International Conference on Machine Learning (pp. 2242-2251). PMLR.
 * Checking for the dataset balance with respect to sensitive features for fairness evaluation
 
 ## Collaborators
