@@ -22,7 +22,6 @@ setup(
           'scikit-plot',
           'seaborn',
           'scikit-dimension',
-          '',
           'pingouin',
           'graphviz',
           'numba==0.53',
