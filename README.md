@@ -29,6 +29,16 @@ To-do:
 <a href = "https://www.hull.ac.uk/work-with-us/research/groups/dependable-intelligent-systems">Dependable Intelligent Systems Lab., University of Hull</a>
 
 <a href = "https://www.iese.fraunhofer.de">Fraunhofer Institute for Experimental Software Engineering</a>
- 
+
+## Contributors
+* Jerin Antony
+* Akinwande Adegbola
+* Zhibao Mian
+* Septavera Sharvia
+* Koorosh Aslansefat
+* Mohammad Naveed Akram
+* Iannis Sorokos
+* Yiannis Papadopoulos
+
 ## License
 This framework is available under the MIT License. 
