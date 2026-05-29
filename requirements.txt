@@ -1,5 +1,5 @@
 matplotlib>=3.5
-numpy>=1.21
+numpy>=2.0.2
 pandas>=1.5
 pingouin>=0.5
 scikit-dimension>=0.3
