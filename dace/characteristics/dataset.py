@@ -140,7 +140,7 @@ def getFeatureNoise(df_DatasetFeatures: pandas.DataFrame) -> float:
     """
     sumVariance = 0
     count = df_DatasetFeatures.shape[1]
-    for (colName, colData) in df_DatasetFeatures.iteritems():
+    for (colName, colData) in df_DatasetFeatures.items():
         sumVariance = sumVariance + colData.var()
         #print('Column Name : ', colData)
         #print('Column Contents : ', colData.values)
@@ -307,80 +307,65 @@ def getAllDatasetCharacteristicsTable(df_Dataset: pandas.DataFrame, className: s
     """
     df_FeaturesWithoutClass = df_Dataset.drop(className, axis=1)
     lst_ColNames = ['Parameters', 'Value']
-    df_table = pandas.DataFrame(columns = lst_ColNames)#creating empty dataframe
+    rows = []
     
     #dimenstionality calculation and appending to the dataframe
     d = getDatasetDimensionality(df_Dataset)
-    df_table = df_table.append({'Parameters' : 'Dimensionality (d)', 'Value':d}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'Dimensionality (d)', 'Value':d})
     
     #Number of instances calculation
     N = getDatasetNumberOfInstances(df_Dataset)
-    df_table = df_table.append({'Parameters' : 'NrOfInstances (N)', 'Value':N}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'NrOfInstances (N)', 'Value':N})
     
     #Number of classes calculation
     C = getDatasetNumberOfClasses(df_Dataset, className)
-    df_table = df_table.append({'Parameters' : 'NrOfClasses (C)', 'Value':C}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'NrOfClasses (C)', 'Value':C})
     
     #Zero data sparsity calculation - ignoring classes ?
     OS = getZeroSparsity(df_FeaturesWithoutClass)
-    df_table = df_table.append({'Parameters' : 'ZeroSparsity (OS)', 'Value' : OS}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'ZeroSparsity (OS)', 'Value' : OS})
     
     #NaN data sparsity calculation - ignoring classes?
     NS = getNaNSparsity(df_FeaturesWithoutClass)
-    df_table = df_table.append({'Parameters' : 'NaNSparsity (NS)', 'Value':NS}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'NaNSparsity (NS)', 'Value':NS})
     
     #Data sparsity calculation
     DS = getDataSparsity(df_Dataset, className)
-    df_table = df_table.append({'Parameters' : 'DataSparsity (DS)', 'Value':DS}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'DataSparsity (DS)', 'Value':DS})
     
     #Data sparsity ratio - TBD-needed?
-    df_table = df_table.append({'Parameters' : 'DataSparsityRatio (DSR)', 'Value':'TBD'}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'DataSparsityRatio (DSR)', 'Value':'TBD'})
     
     #Pearson correlation value of features considering classes
     CorrFC = getCorrelationOfFeaturesWithClass(df_Dataset, className)
-    df_table = df_table.append({'Parameters' : 'Correlation of Featues with Class (CorrFC)', 'Value':CorrFC}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'Correlation of Featues with Class (CorrFC)', 'Value':CorrFC})
     
     #Pearson correlation value of features without considering classes
     CorrFNC = getCorrelationOfFeaturesWithNoClass(df_Dataset, className)
-    df_table = df_table.append({'Parameters' : 'Correlation of Featues without Class (CorrFNC)', 'Value':CorrFNC}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'Correlation of Featues without Class (CorrFNC)', 'Value':CorrFNC})
     
     #Multivariate normality calculation
     MVN = isMultiVariateNormalityExists(df_FeaturesWithoutClass)
-    df_table = df_table.append({'Parameters' : 'Multivariate normality? (MVN)', 'Value': MVN}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'Multivariate normality? (MVN)', 'Value': MVN})
     
     #Homogeneity of class covariances calculation
     HCCov = getHomogeneityOfClassCovariance(df_Dataset, className)
-    df_table = df_table.append({'Parameters' : 'Homogeneity of class covariance (HCCov)', 'Value':HCCov}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'Homogeneity of class covariance (HCCov)', 'Value':HCCov})
     
     #Intrinsic dimensionality calculation
     ID = getIntrinsicDimensionaltiy(df_FeaturesWithoutClass)
-    df_table = df_table.append({'Parameters' : 'Intrinsic Dimensionality-PCA (ID)', 'Value':ID}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'Intrinsic Dimensionality-PCA (ID)', 'Value':ID})
     
     #Intrinsic dimensionality ratio
     IDR = getIntrinsicDimensionaltiyRatio(df_FeaturesWithoutClass)
-    df_table = df_table.append({'Parameters' : 'Intrinsic Dimensionality Ratio (IDR)', 'Value':IDR}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'Intrinsic Dimensionality Ratio (IDR)', 'Value':IDR})
     
     #Feature noise1 calculation as per variance
     FN1 = getFeatureNoise(df_FeaturesWithoutClass)
-    df_table = df_table.append({'Parameters' : 'Feature Noise variance (FN1)', 'Value':FN1}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'Feature Noise variance (FN1)', 'Value':FN1})
     
     #Feature noise2 calculation as per paper
     FN2 = getFeatureNoise2(df_FeaturesWithoutClass)
-    df_table = df_table.append({'Parameters' : 'Feature Noise paper (FN2)', 'Value':FN2}, 
-                ignore_index = True)
+    rows.append({'Parameters' : 'Feature Noise paper (FN2)', 'Value':FN2})
     
-    return df_table
+    return pandas.DataFrame(rows, columns = lst_ColNames)

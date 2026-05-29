@@ -8,6 +8,20 @@
 <div align="justify">Dataset quality assessment is a crucial aspect of machine learning and artificial intelligence, as the performance and accuracy of algorithms are directly dependent on the quality and characteristics of the data they are trained on. Poor quality datasets can lead to biased or inaccurate results, leading to incorrect decisions being made. Hence, it is important to measure the quality of datasets and identify any potential issues before using them for training machine learning models.</div>
 <div align="justify">D-ACE is a framework designed to assess the quality and characteristics of datasets, helping to identify any potential issues that may affect the performance of machine learning algorithms. This framework provides a comprehensive evaluation of the dataset, taking into account factors such as missing values, class imbalance, data heterogeneity, and more. D-ACE can be used to improve the dependability of machine learning algorithms by providing a detailed evaluation of the dataset and identifying any potential issues that may affect the performance of the algorithms. By addressing these issues and ensuring the quality of the dataset, the performance of machine learning algorithms can be improved, leading to more accurate and reliable results. In general, D-ACE can be a valuable tool for measuring the quality of datasets and ensuring the dependability of machine learning algorithms.</div>
 
+## Installation
+
+Install the package from the repository root:
+
+```bash
+python -m pip install .
+```
+
+For local development, install the editable package with development tools:
+
+```bash
+python -m pip install -r requirements-dev.txt
+```
+
 ## Currently Supporting Characteristics:
 
 
@@ -44,6 +58,10 @@ To-do:
 * Mohammad Naveed Akram
 * Iannis Sorokos
 * Yiannis Papadopoulos
+
+## Contributing and Security
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and [SECURITY.md](SECURITY.md) before opening issues or pull requests.
 
 ## License
 This framework is available under the MIT License. 

@@ -1,0 +1,47 @@
+name: Dataset characteristic request
+description: Propose a new dataset characteristic, metric, or example dataset.
+title: "[Characteristic]: "
+labels: ["enhancement", "dataset-characteristic", "needs triage"]
+body:
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type
+      options:
+        - New dataset characteristic or metric
+        - Change to an existing characteristic
+        - Example dataset
+        - Benchmark or validation method
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Explain the proposed metric, dataset, or validation need.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this useful for dependable intelligent systems or dataset assessment?
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: Definition or calculation
+      description: Include equations, pseudocode, expected inputs, and expected outputs if available.
+  - type: textarea
+    id: references
+    attributes:
+      label: References or data source
+      description: Link papers, datasets, licenses, or prior implementations.
+  - type: checkboxes
+    id: data_license
+    attributes:
+      label: Data and licensing
+      options:
+        - label: I included source and license information for any proposed dataset.
+        - label: The proposed data does not contain personal, sensitive, or confidential information.

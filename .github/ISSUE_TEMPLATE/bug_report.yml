@@ -1,0 +1,77 @@
+name: Bug report
+description: Report a reproducible problem with D-ACE.
+title: "[Bug]: "
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve D-ACE. Please do not report security vulnerabilities here; use the security policy instead.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Python package
+        - Dataset characteristics metrics
+        - Dataset files
+        - Documentation
+        - Packaging or installation
+        - Continuous integration
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the bug and its impact.
+      placeholder: "Calling getAllDatasetCharacteristicsTable(...) fails when ..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest example that shows the problem.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect D-ACE to do?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include versions when possible.
+      value: |
+        - OS:
+        - Python:
+        - D-ACE version or commit:
+        - pandas:
+        - scikit-learn:
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output or logs
+      description: Paste any traceback, command output, or relevant notebook cell output.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for similar reports.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true

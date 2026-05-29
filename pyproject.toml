@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dace"
+version = "0.0.1"
+description = "D-ACE: Dataset Assessment and Characteristics Evaluation"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Dependable Intelligent Systems Lab" }
+]
+maintainers = [
+  { name = "Dependable Intelligent Systems Lab" },
+  { name = "Fraunhofer IESE" }
+]
+keywords = [
+  "dataset",
+  "dataset-quality",
+  "machine-learning",
+  "trustworthy-ai",
+  "dependable-ai"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.0",
+  "flake8>=6.0",
+  "pytest>=7.0",
+  "twine>=4.0"
+]
+notebooks = [
+  "graphviz>=0.20",
+  "scikit-plot>=0.3",
+  "safeml"
+]
+
+[project.urls]
+Homepage = "https://github.com/Dependable-Intelligent-Systems-Lab/Dataset-Characteristics"
+Repository = "https://github.com/Dependable-Intelligent-Systems-Lab/Dataset-Characteristics"
+Issues = "https://github.com/Dependable-Intelligent-Systems-Lab/Dataset-Characteristics/issues"
+Documentation = "https://github.com/Dependable-Intelligent-Systems-Lab/Dataset-Characteristics/tree/main/docs"
+
+[tool.setuptools.packages.find]
+include = ["dace", "dace.*"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
