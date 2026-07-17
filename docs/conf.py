@@ -10,7 +10,7 @@ extensions = [
 ]
 
 templates_path = ["_templates"]
-root_doc = "README"
+root_doc = "index"
 source_suffix = {
     ".rst": "restructuredtext",
     ".md": "markdown",
