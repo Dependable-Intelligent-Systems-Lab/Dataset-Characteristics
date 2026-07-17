@@ -1,0 +1,68 @@
+.dace-ai-sidebar {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 1rem 1.2rem 0;
+  padding: 1rem 0 0.25rem;
+}
+
+.dace-ai-sidebar__title {
+  color: #f3f4f6;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.dace-ai-sidebar__link {
+  align-items: center;
+  color: #d1d5db !important;
+  display: flex;
+  font-size: 0.86rem;
+  gap: 0.55rem;
+  line-height: 1.3;
+  padding: 0.32rem 0;
+  text-decoration: none;
+}
+
+.dace-ai-sidebar__link:hover,
+.dace-ai-sidebar__link:focus {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.dace-ai-sidebar__link::after {
+  color: #9ca3af;
+  content: "\2197";
+  font-size: 0.72rem;
+  margin-left: 0.15rem;
+}
+
+.dace-ai-sidebar__icon {
+  align-items: center;
+  color: #ffffff;
+  display: inline-flex;
+  flex: 0 0 1rem;
+  font-size: 0.83rem;
+  font-weight: 700;
+  height: 1rem;
+  justify-content: center;
+  width: 1rem;
+}
+
+.dace-ai-sidebar__icon--anthropic {
+  font-family: Georgia, serif;
+}
+
+.dace-ai-sidebar__icon--google {
+  color: #4285f4;
+}
+
+.dace-ai-sidebar__icon--kimi {
+  color: #9ca3af;
+}
+
+@media screen and (max-width: 768px) {
+  .dace-ai-sidebar {
+    margin-bottom: 1rem;
+  }
+}

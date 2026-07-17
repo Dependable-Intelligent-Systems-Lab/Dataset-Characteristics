@@ -9,6 +9,7 @@ extensions = [
     "sphinx_design",
 ]
 
+templates_path = ["_templates"]
 root_doc = "README"
 source_suffix = {
     ".rst": "restructuredtext",
@@ -24,7 +25,9 @@ myst_heading_anchors = 3
 
 html_theme = "sphinx_rtd_theme"
 html_title = "D-ACE Documentation"
-html_static_path = []
+html_static_path = ["_static"]
+html_css_files = ["ai-sidebar.css"]
+html_js_files = ["ai-sidebar.js"]
 
 exclude_patterns = [
     "_build",
